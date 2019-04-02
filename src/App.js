@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import Login from './components/login.jsx';
+import LoginModal from './components/loginModal.jsx';
 import NavBar from './components/navbar';
 import Footer from './components/footer';
 import './App.css';
@@ -11,6 +13,7 @@ class App extends Component {
       <div className="App">
       <header className="App-header">
         <NavBar />
+        
       </header>
       <div className="container">
         
