@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Login from "./login.jsx";
+import Signup from "./signup.jsx";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,7 +8,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const gitHub = <FontAwesomeIcon icon= {faGithub}/>
 
-class LoginModal extends Component {
+class SignupModal extends Component {
   constructor(props, context) {
     super(props, context);
 
@@ -31,19 +31,15 @@ render() {
     return (
       <>
         <a href="#" className="nav-link" onClick={this.handleShow}>
-          Login
+          Sign-Up
         </a>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Login to your Dev Account</Modal.Title>
+            <Modal.Title>Sign-Up for a Dev Account</Modal.Title>
           </Modal.Header>
-          <Modal.Body><Login /></Modal.Body>
+          <Modal.Body><Signup /></Modal.Body>
           <Modal.Footer>
-            <Button  variant="dark" onClick={this.handleClose}> 
-              <FontAwesomeIcon icon= {faGithub}/> 
-               Login with Github
-            </Button>
             <Button variant="secondary" onClick={this.handleClose}>
               Close
             </Button>
@@ -55,4 +51,4 @@ render() {
   }
 }
 
-export default LoginModal;
+export default SignupModal;
