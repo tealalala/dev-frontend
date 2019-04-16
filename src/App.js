@@ -14,20 +14,17 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <NavBar />
-           <Router>
-            <div>
-        
-              <Switch>
-                <Route exact path='/' component={Home} />
-                <Route exact path='/about' component={About} />
-              </Switch>
-            </div>
-          </Router>
         </header>
-      
-        <div className="my-footer">
-      
-          <Footer />
+        <Router>
+          <div>
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route exact path='/about' component={About} />
+            </Switch>
+          </div>
+        </Router>
+        <div className="my-footer"> 
+        <Footer />
         </div>
       </div>
     
