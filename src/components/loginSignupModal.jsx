@@ -30,41 +30,41 @@ class LoginSignupModal extends Component {
   handleShow() {
     this.setState({ show: true });
   }
-render() {
-    return (
-      <>
-        <a href="#" className="nav-link" onClick={this.handleShow}>
-          Sign-Up or Login
-        </a>
+  render() {
+      return (
+        <>
+          <a href="#" className="nav-link" onClick={this.handleShow}>
+            Sign-Up or Login
+          </a>
 
-        <Modal show={this.state.show} onHide={this.handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Sign-Up for a Dev Account or Login</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Tabs defaultActiveKey="signup" id="signupLoginModal">
-              <Tab eventKey="signup" title="Signup">
-                <Signup />
-              </Tab>
-              <Tab eventKey="login" title="Login">
-                <Login />
-              </Tab>
-            </Tabs>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button  variant="dark" onClick={this.handleClose}> 
-                <FontAwesomeIcon icon= {faGithub}/> 
-                 Login with Github
-            </Button>
-            <Button variant="secondary" onClick={this.handleClose}>
-              Close
-            </Button>
-            
-          </Modal.Footer>
-        </Modal>
-      </>
-    );
-  }
+          <Modal show={this.state.show} onHide={this.handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title>Sign-Up for a Dev Account or Login</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Tabs defaultActiveKey="signup" id="signupLoginModal">
+                <Tab eventKey="signup" title="Signup">
+                  <Signup />
+                </Tab>
+                <Tab eventKey="login" title="Login">
+                  <Login />
+                </Tab>
+              </Tabs>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button  variant="dark" onClick={this.handleClose}> 
+                  <FontAwesomeIcon icon= {faGithub}/> 
+                   Login with Github
+              </Button>
+              <Button variant="secondary" onClick={this.handleClose}>
+                Close
+              </Button>
+              
+            </Modal.Footer>
+          </Modal>
+        </>
+      );
+    }
 }
 
 export default LoginSignupModal;
