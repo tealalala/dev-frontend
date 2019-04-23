@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import Login from "./login.jsx";
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fab } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fab } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const gitHub = <FontAwesomeIcon icon= {faGithub}/>
+const gitHub = <FontAwesomeIcon icon={faGithub} />;
 
 class LoginModal extends Component {
   constructor(props, context) {
@@ -16,7 +16,7 @@ class LoginModal extends Component {
     this.handleClose = this.handleClose.bind(this);
 
     this.state = {
-      show: false,
+      show: false
     };
   }
 
@@ -27,7 +27,7 @@ class LoginModal extends Component {
   handleShow() {
     this.setState({ show: true });
   }
-render() {
+  render() {
     return (
       <>
         <a href="#" className="nav-link" onClick={this.handleShow}>
@@ -38,16 +38,17 @@ render() {
           <Modal.Header closeButton>
             <Modal.Title>Login to your Dev Account</Modal.Title>
           </Modal.Header>
-          <Modal.Body><Login /></Modal.Body>
+          <Modal.Body>
+            <Login />
+          </Modal.Body>
           <Modal.Footer>
-            <Button  variant="dark" onClick={this.handleClose}> 
-              <FontAwesomeIcon icon= {faGithub}/> 
-               Login with Github
+            <Button variant="dark" onClick={this.handleClose}>
+              <FontAwesomeIcon icon={faGithub} />
+              Login with Github
             </Button>
             <Button variant="secondary" onClick={this.handleClose}>
               Close
             </Button>
-            
           </Modal.Footer>
         </Modal>
       </>
