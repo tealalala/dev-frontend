@@ -30,11 +30,6 @@ class App extends Component {
         </div>
       </div>
     
-      <div className="container" />
-      <div className="my-footer">
-          <Footer />
-      </div>
-      </div>
     );
   }
 }
