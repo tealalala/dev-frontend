@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 class FeaturedArticles extends Component {
   render() {
     return (
-      <Tabs>
-        <Tab title="For Mentors">
-          <h1>Some articles here</h1>
-        </Tab>
-        <Tab title="For Mentees">
-          <h2>Other articles here</h2>
-        </Tab>
-      </Tabs>
+      <div>
+        
+        <Card style={{ width: '18rem', float: 'right' }}>
+          <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Body>
+            <Tabs>
+              <Tab title="For Mentors">
+                // put mentor article component in self closing tag here
+              </Tab>
+              <Tab title="For Mentees">
+                // put mentee article component in self closing tag here
+              </Tab>
+            </Tabs>
+          </Card.Body>
+        </Card>
+      </div>
+
 
     )
   }
